@@ -47,3 +47,20 @@ Sesuai dengan ketentuan tugas, website ini telah memenuhi **15 fitur wajib** dan
 
 ---
 
+### 📂 Struktur Folder
+```text
+.
+├── index.html                # Halaman Beranda
+├── sejarah-bahasa.html       # Halaman Sejarah & Bahasa
+├── arsitektur-pakaian.html   # Halaman Galeri Arsitektur
+├── kuliner-kesenian.html     # Halaman Kuliner & Seni
+├── interaktif.html           # Halaman Buku Tamu & Kuis
+├── style.css                 # File Styling Utama (External)
+├── script.js                 # File Logika (External)
+└── README.md                 # Dokumentasi Project
+________________________________________
+📸 Tangkapan Layar (Opsional)
+(Lu bisa nambahin screenshot web lu di sini kalau mau makin keren)
+________________________________________
+Dibuat dengan ❤️ oleh Kelompok [Nama Kelompok Lu]
+
