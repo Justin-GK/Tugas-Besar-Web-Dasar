@@ -7,7 +7,7 @@ Project ini dibuat untuk memenuhi tugas besar mata kuliah **Web Dasar**. Website
 ### 👥 Anggota Kelompok:
 1. Justin Gabriel Kristianto - 2572011
 2. Deven Gerrard Kartamihardja - 2572004
-3. 
+3. Theodore Edbert Suryo - 2572002
 
 ---
 
