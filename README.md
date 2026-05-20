@@ -13,7 +13,7 @@ Project ini dibuat untuk memenuhi tugas besar mata kuliah **Web Dasar**. Website
 
 ### 🚀 Link Live Demo (Hosting)
 Web ini dapat diakses secara publik melalui:
-👉 **[LINK GITHUB PAGES]**
+👉 **[LINK]**
 
 ---
 
@@ -59,8 +59,5 @@ Sesuai dengan ketentuan tugas, website ini telah memenuhi **15 fitur wajib** dan
 ├── script.js                 # File Logika (External)
 └── README.md                 # Dokumentasi Project
 ________________________________________
-📸 Tangkapan Layar (Opsional)
-(Lu bisa nambahin screenshot web lu di sini kalau mau makin keren)
-________________________________________
-Dibuat dengan ❤️ oleh Kelompok [Nama Kelompok Lu]
+
 
