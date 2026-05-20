@@ -48,6 +48,7 @@ Sesuai dengan ketentuan tugas, website ini telah memenuhi **15 fitur wajib** dan
 ---
 
 ### 📂 Struktur Folder
+```text
 ├── index.html                # Halaman Beranda
 ├── sejarah-bahasa.html       # Halaman Sejarah & Bahasa
 ├── arsitektur-pakaian.html   # Halaman Galeri Arsitektur
