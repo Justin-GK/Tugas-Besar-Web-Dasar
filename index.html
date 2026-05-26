@@ -1,47 +1,75 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesona Budaya Denpasar, Bali</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./output.css?v=1">
 </head>
 <body>
-
-    <header>
-        <nav class="navbar">
-            <div class="logo">Budaya<span>Denpasar</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Beranda</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Jelajah Budaya &#9662;</a>
-                    <div class="dropdown-content">
-                        <a href="sejarah-bahasa.html">Sejarah & Bahasa</a>
-                        <a href="arsitektur-pakaian.html">Arsitektur & Pakaian</a>
-                        <a href="kuliner-kesenian.html">Kuliner & Kesenian</a>
-                    </div>
-                </li>
-                <li><a href="interaktif.html">Buku Tamu & Kuis</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="text-effect">Rahajeng Wengi, Denpasar!</h1>
-            <p>Jelajahi pesona sejarah, seni, dan tradisi di jantung Pulau Dewata.</p>
-            <a href="sejarah-bahasa.html" class="btn">Mulai Menjelajah</a>
-        </div>
-    </section>
-
-    <section class="about">
-        <h2>Pusat Kebudayaan Bali</h2>
-        <p>Denpasar bukan sekadar ibu kota provinsi, melainkan urat nadi pelestarian budaya Bali. Di sini, modernitas dan tradisi leluhur hidup berdampingan secara harmonis.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Tugas Besar IN212 Web Dasar - Kelompok Justin.</p>
-    </footer>
     
+    
+<div class="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" 
+     style="background-image: url('assets/kesenian.jpg');">
+  
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <nav class="absolute top-6 left-1/2 transform -translate-x-1/2 w-11/12 max-w-5xl z-20 flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
+    
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+        <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+      </div>
+      <span class="font-bold text-lg tracking-wide">Kebudayaan Bali</span>
+    </div>
+
+    <div class="flex items-center gap-8 text-sm font-medium text-gray-300">
+      <a href="#" class="text-white border-b-2 border-white pb-1">Beranda</a>
+      <a href="#" class="hover:text-white transition-colors">Jelajah Budaya</a>
+      <a href="#" class="hover:text-white transition-colors">Sejarah & Bahasa</a>
+      <a href="#" class="hover:text-white transition-colors">Arsitektur & Pakaian</a>
+      <a href="#" class="hover:text-white transition-colors">Kuliner & Kesenian</a>
+    </div>
+
+  </nav>
+
+  <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-20 max-w-4xl">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+      KULINER & KESENIAN <br> BALI
+    </h1>
+    <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
+      Bali adalah sebuah pulau di Indonesia yang terkenal dengan ornamen alamnya yang indah, budaya yang sangat kental, serta keseniannya yang eksotis. Pulau ini sering disebut sebagai Pulau Dewata karena spiritualitasnya yang magis.
+    </p>
+  </div>
+
+  <div class="absolute bottom-0 w-full z-20 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 pb-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white px-8 md:px-20 max-w-7xl mx-auto">
+      
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100+</h2>
+        <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kuliner Tradisional</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">40+</h2>
+        <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Tarian & Kesenian</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">9</h2>
+        <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kabupaten & Kota Budaya</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100%</h2>
+        <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Warisan Budaya UNESCO</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
 </body>
 </html>
