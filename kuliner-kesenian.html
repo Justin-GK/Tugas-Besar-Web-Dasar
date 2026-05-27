@@ -37,7 +37,7 @@
                 </p>
 
                 <div class="flex flex-row items-center gap-6 justify-start">
-                    <button type="button" class="rounded-xl inline-flex items-center text-slate-950 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 shadow-lg shadow-amber-600/10 font-semibold text-sm px-8 py-5 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none group cursor-pointer shrink-0">
+                    <button type="button" onclick="location.href='#kuliner'" class="rounded-xl inline-flex items-center text-slate-950 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 shadow-lg shadow-amber-600/10 font-semibold text-sm px-8 py-5 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none group cursor-pointer shrink-0">
                         Jelajahi Kuliner
                         <svg class="w-4 h-4 ms-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 12H5m14 0l-4 4m4-4l-4-4"/>
@@ -52,16 +52,20 @@
                     </button>
                 </div>
             </div>
-        <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-0 pointer-events-none"></div>
+        <div class="absolute bottom-0 w-full h-64 bg-gradient-to-t from-black to-transparent z-0 pointer-events-none"></div>
     </div>
     
-    <div id="kesenian" class="w-full pt-24 pb-24 relative z-20">
+    
+    <div id="kesenian" class="w-full pt-24 pb-24 relative z-10">
+        <div class="absolute inset-0 bg-[url('assets/ukiran.png')] bg-cover bg-center opacity-12 mix-blend-overlay pointer-events-none z-[-1]"></div>
         <h3 class="text-xl md:text-5xl font-bold text-white leading-tight mb-6 tracking-tight text-center">
             KESENIAN BALI
         </h3>
-
+        <p class="relative z-10 text-xl text-gray leading-relaxed max-w-3xl mx-auto text-center font-light mb-8">
+            Seni pertunjukan dan tradisi di Bali bukan sekadar hiburan visual, melainkan sebuah bentuk persembahan suci dan bagian tak terpisahkan dari ritual spiritual masyarakat Dewata. Setiap gerakan tari yang dinamis, tabuhan gamelan yang magis, hingga ritual adat yang diwariskan turun-temurun, merajut harmoni mendalam antara manusia, alam, dan sang pencipta.
+        </p>
         <div class="inline-flex items-center justify-center w-full relative my-8">
-            <hr class="w-[400px] h-px bg-white/20 border-0">
+            <hr class="w-[900px] h-px bg-white/20 border-0">
             <span class="absolute px-3 bg-black left-1/2 -translate-x-1/2">
                 <img src="assets/logo.png" alt="" class="w-20 h-20 object-contain">
             </span>
@@ -146,14 +150,67 @@
                 </a>
             </div>
         </div>
+    </div> 
 
+
+    <div id="kuliner" class="w-full pt-24 pb-24 relative z-10 bg-black">
+    
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black z-[-1]"></div>
+
+    <h3 class="text-xl md:text-5xl font-bold text-white leading-tight mb-4 tracking-tight text-center relative z-10">
+        KULINER KHAS
+    </h3>
+    
+    <p class="relative z-10 text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-center font-light px-4 mb-16">
+        Cita rasa otentik dari Pulau Dewata. Perpaduan bumbu rempah tradisional (basa genep) yang diwariskan turun-temurun, menciptakan simfoni rasa yang tak terlupakan.
+    </p>
+
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            
+            <div class="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="assets/ayam_betutu.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Ayam Betutu">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                </div>
+                <div class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Ayam Betutu</h4>
+                    <p class="text-gray-300 text-sm font-light line-clamp-3">Ayam utuh yang dipanggang lambat dalam sekam dengan bumbu genep pedas. Teksturnya sangat lembut dengan aroma rempah yang meresap sempurna.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="assets/sate_lilit.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sate Lilit">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                </div>
+                <div class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Sate Lilit</h4>
+                    <p class="text-gray-300 text-sm font-light line-clamp-3">Daging cincang berbumbu yang dililitkan pada batang serai, kemudian dipanggang di atas bara api. Menghasilkan perpaduan rasa gurih dan harum serai.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="assets/nasi_campur.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Nasi Campur Bali">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                </div>
+                <div class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
+                    <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal matah yang segar menggigit.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
 
     <footer class="bg-black text-gray-500 text-xs py-8 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-8 md:px-20 flex flex-col sm:flex-row justify-center items-center gap-4">
             <p>&copy; 2026 Tugas Besar IN212 Web Dasar. Tema Budaya Kota Denpasar, Bali.</p>
         </div>
     </footer>
-
-    </div> <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 </html>
