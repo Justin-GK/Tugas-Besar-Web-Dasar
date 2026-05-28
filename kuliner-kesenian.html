@@ -18,10 +18,10 @@
     </style>
 </head>
 
-<body class="bg-black text-white font-sans selection:bg-yellow-500 selection:text-black min-h-screen">
+<body class="bg-black text-white font-sans selection:bg-yellow-500 selection:text-black min-h-screen flex flex-col">
 
-    <nav
-        class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 hidden md:flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
+    <main class="flex-grow flex flex-col w-full overflow-hidden">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 hidden md:flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
         <div class="flex items-center gap-3 lg:gap-4 shrink-0">
             <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
                 <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
@@ -87,14 +87,12 @@
         <div
             class="absolute inset-0 bg-[url('assets/ukiran.png')] bg-cover bg-center opacity-12 mix-blend-overlay pointer-events-none z-[-1]">
         </div>
-        <h3 class="text-xl md:text-5xl font-bold text-white leading-tight mb-6 tracking-tight text-center">
+        <h3 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 leading-tight mb-6 tracking-tight text-center">
             KESENIAN BALI
         </h3>
-        <p class="relative z-10 text-xl text-gray leading-relaxed max-w-3xl mx-auto text-center font-light mb-8">
-            Seni pertunjukan dan tradisi di Bali bukan sekadar hiburan visual, melainkan sebuah bentuk persembahan suci
-            dan bagian tak terpisahkan dari ritual spiritual masyarakat Dewata. Setiap gerakan tari yang dinamis,
-            tabuhan gamelan yang magis, hingga ritual adat yang diwariskan turun-temurun, merajut harmoni mendalam
-            antara manusia, alam, dan sang pencipta.
+
+        <p class="relative z-10 text-lg md:text-xl text-gray-300 leading-loose max-w-4xl mx-auto text-center font-light mb-8">
+            Seni pertunjukan dan tradisi di Bali bukan sekadar hiburan visual, melainkan sebuah bentuk <span class="font-semibold text-amber-500">persembahan suci</span> dan bagian tak terpisahkan dari ritual spiritual masyarakat Dewata. Setiap gerakan tari yang dinamis, tabuhan gamelan yang magis, hingga ritual adat yang diwariskan turun-temurun, merajut <span class="font-semibold text-amber-500">harmoni mendalam</span> antara manusia, alam, dan Sang Pencipta.
         </p>
         <div class="inline-flex items-center justify-center w-full relative my-8">
             <hr class="w-[900px] h-px bg-white/20 border-0">
@@ -173,16 +171,19 @@
         <div class="w-full max-w-6xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[280px]">
                 <div onclick="bukaKesenian('ogoh')"
-                    class="relative md:col-span-4 row-span-2 rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
-                    <img src="assets/ogoh.jpg" alt="Terasering"
+                    class="relative md:col-span-4 row-span-2 rounded-3xl overflow-hidden group shadow-lg cursor-pointer border border-white/5 hover:border-amber-500/50 transition-colors duration-500">
+                    
+                    <img src="assets/ogoh.jpg" alt="Tradisi Ogoh-Ogoh"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Tradisi Ogoh-Ogoh</h3>
-                        <p class="text-sm text-gray-300 font-light line-clamp-3">Prosesi mengarak patung raksasa simbol
-                            unsur negatif untuk menyucikan diri dan lingkungan menjelang Hari Raya Nyepi.</p>
+                    
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full pr-12 md:pr-16">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">Tradisi Ogoh-Ogoh</h3>
+                        <p class="text-sm text-gray-300 font-light line-clamp-3">Prosesi mengarak patung raksasa simbol unsur negatif untuk menyucikan diri dan lingkungan menjelang Hari Raya Nyepi.</p>
                     </div>
-                    <svg class="w-10 h-12 ms-1 transform transition-transform duration-300 group-hover:translate-x-1"
+
+                    <svg class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-6 h-6 text-amber-500 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -198,7 +199,7 @@
                         <p class="text-sm text-gray-300 font-light line-clamp-2">Tarian klasik Bali yang anggun dan
                             dinamis, terkenal dengan gerakan mata ekspresif serta kelenturan tubuh penarinya.</p>
                     </div>
-                    <svg class="w-10 h-12 ms-1 transform transition-transform duration-300 group-hover:translate-x-1"
+                    <svg class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-6 h-6 text-amber-500 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -214,7 +215,7 @@
                         <p class="text-xs md:text-sm text-gray-300 font-light line-clamp-2">Seni pertunjukan drama tari
                             kisah Ramayana yang diiringi seruan ritmis puluhan pria tanpa alat musik.</p>
                     </div>
-                    <svg class="w-10 h-12 ms-1 transform transition-transform duration-300 group-hover:translate-x-1"
+                    <svg class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-6 h-6 text-amber-500 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -230,7 +231,7 @@
                         <p class="text-xs md:text-sm text-gray-400 font-light line-clamp-2">Ajang balap sepasang kerbau
                             khas Jembrana sebagai wujud syukur dan kegembiraan petani atas hasil panen.</p>
                     </div>
-                    <svg class="w-10 h-12 ms-1 transform transition-transform duration-300 group-hover:translate-x-1"
+                    <svg class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-6 h-6 text-amber-500 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -239,174 +240,186 @@
         </div>
     </div>
 
+    <div class="w-full flex justify-center py-12 md:py-16">
+        <div class="w-1/2 md:w-1/3 h-[1px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>
+    </div>
+
     <div id="kuliner" class="w-full pt-24 pb-24 relative z-10 bg-black">
         <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black z-[-1]"></div>
-        <h3
-            class="text-xl md:text-5xl font-bold text-white leading-tight mb-4 tracking-tight text-center relative z-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 leading-tight mb-4 tracking-tight text-center">
             KULINER KHAS
-        </h3>
-        <p
-            class="relative z-10 text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-center font-light px-4 mb-16">
-            Cita rasa otentik dari Pulau Dewata. Perpaduan bumbu rempah tradisional (basa genep) yang diwariskan
-            turun-temurun, menciptakan simfoni rasa yang tak terlupakan.
+        </h2>
+
+        <p class="text-lg md:text-xl text-gray-300 leading-loose max-w-3xl mx-auto text-center font-light mb-12">
+            Cita rasa otentik dari Pulau Dewata. Perpaduan <span class="font-semibold text-amber-500">bumbu rempah tradisional</span> (basa genep) yang diwariskan turun-temurun, menciptakan <span class="font-semibold text-amber-500">simfoni rasa</span> yang tak terlupakan.
         </p>
-        <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
-            <div class="w-full overflow-hidden relative py-4 bg-transparent">
 
-                <div
-                    class="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none">
-                </div>
-                <div
-                    class="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none">
-                </div>
+        <p class="text-lg md:text-xl text-gray-300 leading-loose max-w-3xl mx-auto text-center font-light mb-8">
+            Cita rasa otentik dari Pulau Dewata. Perpaduan <span class="font-semibold text-amber-500">bumbu rempah tradisional</span> (basa genep) yang diwariskan turun-temurun, menciptakan <span class="font-semibold text-amber-500">simfoni rasa</span> yang tak terlupakan.
+        </p>
 
-                <div
-                    class="flex w-max space-x-6 md:space-x-8 animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused] py-4">
+        <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-12 cursor-default">
+            <span class="px-3 md:px-4 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/5 text-gray-300 text-[10px] md:text-xs tracking-widest uppercase flex items-center gap-2">
+                <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-amber-500"></span> Basa Genep
+            </span>
+            <span class="px-3 md:px-4 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/5 text-gray-300 text-[10px] md:text-xs tracking-widest uppercase flex items-center gap-2">
+                <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-amber-500"></span> Resep Leluhur
+            </span>
+            <span class="px-3 md:px-4 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/5 text-gray-300 text-[10px] md:text-xs tracking-widest uppercase flex items-center gap-2">
+                <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-amber-500"></span> Bahan Alami
+            </span>
+        </div>
 
-                    <div class="flex space-x-6 md:space-x-8">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div class="w-full overflow-hidden relative py-4 bg-transparent">
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/ayam_betutu.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Ayam Betutu">
+            <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
+                <div class="w-full overflow-hidden relative py-4 bg-transparent">
+                    <div class="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                    <div class="flex w-max space-x-6 md:space-x-8 animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused] py-4">
+                        
+                        <div class="flex space-x-6 md:space-x-8">
+                            <div  data-kategori="makanan" class="kuliner-item w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/ayam_betutu.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Ayam Betutu">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Ayam Betutu</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Ayam utuh yang dipanggang
+                                        lambat dalam sekam dengan bumbu genep pedas. Teksturnya sangat lembut dengan aroma
+                                        rempah yang meresap sempurna.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Ayam Betutu</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Ayam utuh yang dipanggang
-                                    lambat dalam sekam dengan bumbu genep pedas. Teksturnya sangat lembut dengan aroma
-                                    rempah yang meresap sempurna.</p>
-                            </div>
-                        </div>
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/sate_lilit.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Sate Lilit">
+                            <div  data-kategori="makanan" class="kuliner-item w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/sate_lilit.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Sate Lilit">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Sate Lilit</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Daging cincang berbumbu yang
+                                        dililitkan pada batang serai, kemudian dipanggang di atas bara api. Menghasilkan
+                                        perpaduan rasa gurih dan harum serai.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Sate Lilit</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Daging cincang berbumbu yang
-                                    dililitkan pada batang serai, kemudian dipanggang di atas bara api. Menghasilkan
-                                    perpaduan rasa gurih dan harum serai.</p>
-                            </div>
-                        </div>
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/nasi_campur.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Nasi Campur Bali">
+                            <div  data-kategori="makanan" class="kuliner-item w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/nasi_campur.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Nasi Campur Bali">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
+                                        dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
+                                        matah yang segar menggigit.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
-                                    dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
-                                    matah yang segar menggigit.</p>
-                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="flex space-x-6 md:space-x-8" aria-hidden="true">
 
-                    <div class="flex space-x-6 md:space-x-8" aria-hidden="true">
-
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/ayam_betutu.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Ayam Betutu">
+                            <div  data-kategori="minuman" class="kuliner-item w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/ayam_betutu.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Ayam Betutu">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Ayam Betutu</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Ayam utuh yang dipanggang
+                                        lambat dalam sekam dengan bumbu genep pedas. Teksturnya sangat lembut dengan aroma
+                                        rempah yang meresap sempurna.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Ayam Betutu</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Ayam utuh yang dipanggang
-                                    lambat dalam sekam dengan bumbu genep pedas. Teksturnya sangat lembut dengan aroma
-                                    rempah yang meresap sempurna.</p>
-                            </div>
-                        </div>
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/sate_lilit.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Sate Lilit">
+                            <div
+                                class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/sate_lilit.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Sate Lilit">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Sate Lilit</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Daging cincang berbumbu yang
+                                        dililitkan pada batang serai, kemudian dipanggang di atas bara api. Menghasilkan
+                                        perpaduan rasa gurih dan harum serai.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Sate Lilit</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Daging cincang berbumbu yang
-                                    dililitkan pada batang serai, kemudian dipanggang di atas bara api. Menghasilkan
-                                    perpaduan rasa gurih dan harum serai.</p>
-                            </div>
-                        </div>
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/nasi_campur.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Nasi Campur Bali">
+                            <div  data-kategori="minuman" class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/nasi_campur.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Nasi Campur Bali">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
+                                        dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
+                                        matah yang segar menggigit.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
-                                    dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
-                                    matah yang segar menggigit.</p>
-                            </div>
-                        </div>
 
-                        <div
-                            class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                            <div class="h-72 overflow-hidden relative">
-                                <img src="assets/nasi_campur.jpg"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    alt="Nasi Campur Bali">
+                            <div
+                                class="w-[300px] md:w-[400px] flex-shrink-0 group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                                <div class="h-72 overflow-hidden relative">
+                                    <img src="assets/nasi_campur.jpg"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        alt="Nasi Campur Bali">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                                    class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
+                                    <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
+                                    <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
+                                        dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
+                                        matah yang segar menggigit.</p>
                                 </div>
                             </div>
-                            <div
-                                class="absolute bottom-0 w-full p-6 md:p-8 transform transition-transform duration-500">
-                                <h4 class="text-2xl font-bold text-amber-500 mb-2">Nasi Campur Bali</h4>
-                                <p class="text-gray-300 text-sm font-light line-clamp-3">Sajian lengkap berisi nasi
-                                    dengan ragam lauk pauk tradisional seperti lawar, ayam sisit, sate lilit, dan sambal
-                                    matah yang segar menggigit.</p>
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </main>
+    
 
     <footer class="bg-[#09090b] border-t border-zinc-800 text-zinc-400 pt-16 pb-12 px-6 relative z-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
@@ -459,12 +472,6 @@
     </footer>
 
 
-    <!-- Modal toggle -->
-    <button data-modal-target="default-modal" data-modal-toggle="default-modal"
-        class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
-        type="button">
-        Toggle modal
-    </button>
 
     <!-- Main modal -->
     <div id="custom-modal" tabindex="-1" aria-hidden="true"
@@ -497,56 +504,101 @@
 
     <script>
         const dataKesenian = {
-            ogoh: {
-                judul: "Tradisi Ogoh-Ogoh",
-                deskripsi: "Prosesi mengarak patung raksasa (Ogoh-ogoh) yang melambangkan unsur negatif dan sifat buruk Bhuta Kala. Ritual ini dilaksanakan pada malam Pengerupukan (sehari menjelang Hari Raya Nyepi) dengan tujuan menyucikan lingkungan alam dan diri manusia. Di akhir festival, patung-patung ini akan dibakar sebagai simbol pemusnahan unsur jahat agar umat bisa menyambut Nyepi dengan hati yang suci."
-            },
-            legong: {
-                judul: "Tari legong",
-                deskripsi: "Tarian klasik Bali yang sangat anggun dan dinamis, terkenal dengan gerakan mata ekspresif (seledet) serta kelenturan tubuh penarinya yang luar biasa. Berakar dari tradisi kraton pra-kolonial, tarian ini awalnya merupakan hiburan eksklusif bagi para raja Bali dan dipentaskan oleh penari perempuan belia di bawah sinar bulan atau lampu obor sebagai bentuk persembahan spiritual yang luhur."
-            },
-            kecak: {
-                judul: "Seni Drama Tari Kecak",
-                deskripsi: "Pertunjukan drama tari kera sakti yang mengangkat kisah epik Ramayana. Keunikan utama Tari Kecak adalah sama sekali tidak menggunakan alat musik pengiring instrumental, melainkan mengandalkan paduan suara ritmis dari puluhan pria berpakaian kain kotak-kotak yang menyerukan suara 'cak-cak-cak' secara konstan, menciptakan atmosfer magis yang luar biasa, terutama saat dipentaskan menjelang matahari terbenam."
-            },
-            balapan: {
-                judul: "Tradisi Mekepung (Balap Kerbau)",
-                deskripsi: "Ajang balap sepasang kerbau khas dari Kabupaten Jembrana, Bali Barat. Tradisi Mekepung ini awalnya lahir dari rutinitas para petani yang saling bergotong-royong membajak sawah. Kini, tradisi ini telah bertransformasi menjadi festival budaya besar tahunan sebagai wujud rasa syukur, kegembiraan, dan selebrasi para petani atas hasil panen melimpah yang mereka dapatkan."
-            }
-        };
+    ogoh: {
+        judul: "Tradisi Ogoh-Ogoh",
+        waktu: "Malam Pengerupukan (H-1 Nyepi)",
+        makna: "Pemusnahan Sifat Buruk (Bhuta Kala)",
+        deskripsi: "Karya seni patung raksasa yang diarak keliling desa dengan iringan gamelan dinamis dan obor. Ritual ini bertujuan untuk menetralisir energi negatif di alam semesta serta menyucikan diri manusia.",
+        highlightJudul: "Momen Puncak",
+        highlightTeks: "Di akhir festival, patung raksasa ini wajib dibakar hingga habis (Pralina) sebagai simbol kembalinya unsur alam ke asalnya."
+    },
+    legong: {
+        judul: "Tari Legong",
+        waktu: "Fleksibel (Dulu saat bulan purnama)",
+        makna: "Persembahan Spiritual Luhur",
+        deskripsi: "Tarian klasik Bali yang sangat anggun dan dinamis, berakar dari tradisi kraton pra-kolonial. Awalnya merupakan hiburan eksklusif bagi para raja Bali yang dipentaskan di bawah sinar bulan.",
+        highlightJudul: "Ciri Khas Estetik",
+        highlightTeks: "Terkenal dengan gerakan mata ekspresif yang disebut <strong>Seledet</strong>, serta kelenturan tubuh penarinya yang luar biasa menawan."
+    },
+    kecak: {
+        judul: "Seni Drama Tari Kecak",
+        waktu: "Menjelang Matahari Terbenam",
+        makna: "Kisah Epik Ramayana",
+        deskripsi: "Pertunjukan drama tari kera sakti yang unik karena sama sekali tidak menggunakan alat musik pengiring instrumental, melainkan mengandalkan paduan suara ritmis puluhan pria.",
+        highlightJudul: "Atmosfer Magis",
+        highlightTeks: "Suara <strong>'cak-cak-cak'</strong> diserukan secara konstan untuk menciptakan harmoni yang magis, ditambah dengan atraksi tarian api berbahaya di akhir pertunjukan."
+    },
+    balapan: {
+        judul: "Tradisi Mekepung",
+        waktu: "Musim Panen Raya",
+        makna: "Syukur & Selebrasi Petani",
+        deskripsi: "Ajang balap sepasang kerbau khas dari Kabupaten Jembrana, Bali Barat. Tradisi ini lahir dari gotong-royong petani membajak sawah yang kini bertransformasi menjadi festival bergengsi.",
+        highlightJudul: "Modifikasi Unik",
+        highlightTeks: "Kerbau yang bertanding dihias super mewah dengan mahkota kepala bernama <strong>Rumbing</strong> dan ditarik menggunakan kereta kayu aerodinamis."
+    }
+};
 
-        function bukaKesenian(id) {
-            const modal = document.getElementById('custom-modal');
-            const modalBox = document.getElementById('modalbox'); // Disamakan tanpa strip sesuai HTML
-            const konten = dataKesenian[id];
+function bukaKesenian(id) {
+    const modal = document.getElementById('custom-modal');
+    const modalBox = document.getElementById('modalbox');
+    const konten = dataKesenian[id];
 
-            if (konten) {
-                document.getElementById('modal-title').innerText = konten.judul;
-                document.getElementById('modal-desc').innerText = konten.deskripsi; // Fix innerText
+    if (konten) {
+        document.getElementById('modal-title').innerText = konten.judul;
+        
+        document.getElementById('modal-desc').innerHTML = `
+            <!-- 1. Quick Facts (Grid 2 Kolom) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5 mt-4">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex flex-col justify-center">
+                    <span class="text-[11px] text-amber-500 font-bold tracking-widest uppercase mb-1">Waktu Pelaksanaan</span>
+                    <span class="text-sm text-gray-200 font-medium">${konten.waktu}</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex flex-col justify-center">
+                    <span class="text-[11px] text-amber-500 font-bold tracking-widest uppercase mb-1">Makna Simbolis</span>
+                    <span class="text-sm text-gray-200 font-medium">${konten.makna}</span>
+                </div>
+            </div>
 
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
+            <!-- 2. Deskripsi Singkat -->
+            <p class="text-sm text-gray-300 leading-relaxed font-light mb-5">
+                ${konten.deskripsi}
+            </p>
 
-                // Fix arrow function dan target class animasinya
-                setTimeout(() => {
-                    modalBox.classList.remove('scale-95');
-                    modalBox.classList.add('scale-100');
-                }, 10);
-            }
-        }
+            <!-- 3. Highlight / Fun Fact Box -->
+            <div class="border-l-4 border-amber-500 bg-amber-500/10 p-3 rounded-r-lg mb-2">
+                <div class="flex items-center gap-2 mb-1">
+                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path></svg>
+                    <span class="text-xs text-amber-400 font-bold">${konten.highlightJudul}</span>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    ${konten.highlightTeks}
+                </p>
+            </div>
+        `;
 
-        function tutupModal() {
-            const modal = document.getElementById('custom-modal');
-            const modalBox = document.getElementById('modalbox'); // Fix disamakan jadi 'modalbox' tanpa strip
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
 
-            modalBox.classList.remove('scale-100');
-            modalBox.classList.add('scale-95');
+        setTimeout(() => {
+            modalBox.classList.remove('scale-95');
+            modalBox.classList.add('scale-100');
+        }, 10);
+    }
+}
 
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-            }, 200);
-        }
+function tutupModal() {
+    const modal = document.getElementById('custom-modal');
+    const modalBox = document.getElementById('modalbox');
+
+    modalBox.classList.remove('scale-100');
+    modalBox.classList.add('scale-95');
+
+    setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }, 200);
+}
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
