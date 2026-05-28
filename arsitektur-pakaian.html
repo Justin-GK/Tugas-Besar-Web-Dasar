@@ -88,7 +88,7 @@
                     class="group bg-zinc-900/40 border border-white/5 rounded-2xl overflow-hidden hover:border-yellow-500/20 transition-all duration-300 shadow-xl">
                     <div class="h-60 overflow-hidden relative">
                         <img src="assets/payas_agung.jpg" alt="Payas Agung"
-                            class="w-full translate-0.5 h-fit object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute top-4 left-4 bg-yellow-500 text-black text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Utama
                             / Pernikahan</span>
@@ -118,7 +118,7 @@
                     class="group bg-zinc-900/40 border border-white/5 rounded-2xl overflow-hidden hover:border-yellow-500/20 transition-all duration-300 shadow-xl">
                     <div class="h-60 overflow-hidden relative">
                         <img src="assets/payas_madya.jpg" alt="Payas Madya"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-fit object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute top-4 left-4 bg-white text-black text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Madya
                             / Persembahyangan</span>
@@ -177,11 +177,56 @@
         </section>
     </main>
 
-    <footer class="bg-black text-gray-500 text-xs py-8 border-t border-white/5 relative z-30">
-        <div class="max-w-7xl mx-auto px-8 md:px-20 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <p>&copy; 2026 Tugas Besar IN212 Web Dasar. Tema Budaya Kota Denpasar, Bali.</p>
+    <footer class="bg-[#09090b] border-t border-zinc-800 text-zinc-400 pt-16 pb-12 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-7 h-7 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                        <img src="assets/logo.png" alt="Logo" class="w-4 h-4 object-contain">
+                    </div>
+                    <span class="text-white font-bold text-base tracking-wide">Kebudayaan Bali</span>
+                </div>
+                <p class="text-zinc-500 text-sm max-w-sm leading-relaxed">
+                    Platform edukasi digital warisan nusantara, mendokumentasikan keindahan eksotis tradisi, arsitektur,
+                    bahasa, dan kuliner Pulau Dewata.
+                </p>
+            </div>
+
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest">Materi Edukasi</h4>
+                <ul class="space-y-2 text-sm text-zinc-500">
+                    <li><a href="sejarah-bahasa.html" class="hover:text-yellow-500 transition-colors">Sejarah &amp;
+                            Bahasa</a></li>
+                    <li><a href="arsitektur-pakaian.html" class="hover:text-yellow-500 transition-colors">Arsitektur
+                            &amp; Pakaian</a></li>
+                    <li><a href="kuliner-kesenian.html" class="hover:text-yellow-500 transition-colors">Kuliner &amp;
+                            Kesenian</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest">Zona Kreatif</h4>
+                <ul class="space-y-2 text-sm text-zinc-500">
+                    <li><a href="interaktif.html" class="hover:text-yellow-500 transition-colors">Uji Wawasan Kuis</a>
+                    </li>
+                    <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Kembali ke Beranda</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
+            <p>&copy; 2026 Kebudayaan Bali — Pesona Eksotis Nusantara. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+            </div>
         </div>
     </footer>
+
 
     <script>
         const databaseArsitektur = [
