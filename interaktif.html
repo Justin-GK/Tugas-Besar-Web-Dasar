@@ -1,9 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktif Bali</title>
+    <title>Kuis Interaktif - Pesona Budaya Bali</title>
     <link rel="stylesheet" href="./output.css?v=1">
+    <style>
+        #menuToggle:checked~#mobileMenu {
+            display: flex !important;
+        }
+
+        #menuToggle:checked~label #line1 {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        #menuToggle:checked~label #line2 {
+            opacity: 0;
+        }
+
+        #menuToggle:checked~label #line3 {
+            transform: rotate(-45deg) translate(3px, -3px);
+        }
+    </style>
 </head>
+
+<body class="bg-black text-white font-sans selection:bg-yellow-500 selection:text-black min-h-screen">
+
+    <nav
+        class="sticky top-6 mx-auto w-11/12 max-w-5xl z-50 flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
+
+        <div class="flex items-center gap-3 lg:gap-4 shrink-0">
+            <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+            </div>
+            <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4 lg:gap-8 text-xs lg:text-sm font-medium text-gray-300 shrink-0">
+            <a href="index.html" class="hover:text-white transition-colors">Beranda</a>
+            <a href="sejarah-bahasa.html" class="hover:text-white transition-colors whitespace-nowrap">Sejarah &
+                Bahasa</a>
+            <a href="arsitektur-pakaian.html" class="hover:text-white transition-colors whitespace-nowrap">Arsitektur &
+                Pakaian</a>
+            <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap">Kuliner &
+                Kesenian</a>
+            <a href="interaktif.html"
+                class="hover:text-yellow-400 text-yellow-500 border-b-2 pb-1 font-semibold transition-all duration-300 ease-in-out">Uji
+                Wawasan</a>
+        </div>
+
+        <input type="checkbox" id="menuToggle" class="hidden">
+        <label id="hamburgerBtn" for="menuToggle"
+            class="lg:hidden flex flex-col justify-between w-6 h-4 pt-0.5 focus:outline-none z-50 cursor-pointer">
+            <span id="line1" class="w-full h-0.5 bg-white rounded transition-all duration-300 origin-center"></span>
+            <span id="line2" class="w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+            <span id="line3" class="w-full h-0.5 bg-white rounded transition-all duration-300 origin-center"></span>
+        </label>
+
+        <div id="mobileMenu"
+            class="hidden fixed inset-0 bg-black/95 flex flex-col items-center justify-center gap-8 text-xl font-semibold tracking-wide transition-all duration-300 z-40">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Beranda</a>
+            <a href="sejarah-bahasa.html" class="text-gray-400 hover:text-white transition-colors">Sejarah & Bahasa</a>
+            <a href="arsitektur-pakaian.html" class="text-gray-400 hover:text-white transition-colors">Arsitektur &
+                Pakaian</a>
+            <a href="kuliner-kesenian.html" class="text-gray-400 hover:text-white transition-colors">Kuliner &
+                Kesenian</a>
+            <a href="interaktif.html" class="text-yellow-500 font-bold border-b-2 border-yellow-500 pb-1">Interaktif</a>
+        </div>
+    </nav>
+
+    <div class="relative w-full h-[60vh] -mt-24 bg-cover bg-center bg-no-repeat overflow-hidden"
+        style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80');">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-zinc-950 to-transparent z-20"></div>
+        <div class="relative z-30 flex flex-col justify-center h-full px-8 md:px-20 max-w-4xl pt-24">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">
+                EVALUASI & <br> KUIS INTERAKTIF
+            </h1>
+            <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
+                Uji wawasan dan pemahaman Anda mengenai sejarah, lestarinya bahasa, keunikan arsitektur, strata busana,
+                serta kuliner khas kota Denpasar, Bali.
+            </p>
+        </div>
+    </div>
+
+    <main class="bg-zinc-950 text-white px-8 md:px-20 py-16 space-y-24 relative z-30">
+
+        <section id="interaktif" class="max-w-3xl mx-auto space-y-10">
+            <div class="border-b border-white/10 pb-6 text-center md:text-left">
+                <h2 class="text-2xl font-bold tracking-tight">Uji Wawasan Budaya Bali</h2>
+                <p class="text-xs text-gray-400 mt-1">Jawablah pertanyaan di bawah ini dengan memilih satu jawaban yang
+                    paling tepat.</p>
+            </div>
+
+            <div id="identitasBox"
+                class="bg-zinc-900/40 border border-white/5 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl transition-all duration-300">
+                <h3 class="text-lg font-bold text-yellow-500 flex items-center gap-2">
+                    <span>📝</span> Registrasi Peserta Kuis
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Nama
+                            Lengkap</label>
+                        <input type="text" id="namaPeserta" placeholder="Masukkan nama Anda..."
+                            class="w-full bg-zinc-950 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-500 text-white transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Asal
+                            Daerah / Institusi</label>
+                        <input type="text" id="asalPeserta" placeholder="Masukkan asal daerah Anda..."
+                            class="w-full bg-zinc-950 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-500 text-white transition-all">
+                    </div>
+                    <button onclick="mulaiKuis()"
+                        class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-sm py-3.5 rounded-xl transition-all shadow-lg active:scale-[0.98]">
+                        Mulai Kuis Interaktif
+                    </button>
+                </div>
+            </div>
+
+            <div id="kuisContainer"
+                class="hidden bg-zinc-900/40 border border-white/5 rounded-2xl p-6 md:p-8 space-y-8 shadow-xl">
+
+                <div class="w-full bg-zinc-950 h-2 rounded-full overflow-hidden border border-white/5">
+                    <div id="progressBar" class="bg-yellow-500 h-full w-0 transition-all duration-300"></div>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span id="nomorPertanyaan"
+                        class="text-xs font-bold uppercase tracking-widest text-yellow-500">Pertanyaan 1 dari 5</span>
+                    <span id="haloUser" class="text-xs text-gray-400 font-light"></span>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 id="teksSoal" class="text-lg md:text-xl font-semibold leading-relaxed">Loading Pertanyaan...
+                    </h3>
+                    <div id="pilihanContainer" class="grid grid-cols-1 gap-4 pt-2"></div>
+                </div>
+
+                <div class="flex justify-between items-center pt-4 border-t border-white/5">
+                    <div class="text-xs text-gray-500 italic">Pilih salah satu jawaban untuk melanjutkan</div>
+                </div>
+            </div>
+
+            <div id="hasilContainer"
+                class="hidden bg-zinc-900/40 border border-yellow-500/20 rounded-2xl p-8 text-center space-y-6 shadow-2xl">
+                <div
+                    class="inline-flex items-center justify-center w-20 h-20 bg-yellow-500/10 rounded-full text-4xl mb-2">
+                    🏆
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-2xl font-bold text-white">Luar Biasa, <span id="hasilNama"
+                            class="text-yellow-500"></span>!</h3>
+                    <p class="text-sm text-gray-400 max-w-md mx-auto font-light">Anda telah menyelesaikan kuis
+                        interaktif Pesona Budaya Denpasar, Bali. Berikut adalah hasil evaluasi Anda:</p>
+                </div>
+
+                <div class="bg-zinc-950/60 border border-white/5 rounded-2xl py-6 max-w-sm mx-auto">
+                    <div class="text-5xl font-extrabold text-yellow-500 mb-1" id="skorAngka">0</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-gray-500">Total Skor Perolehan
+                    </div>
+                </div>
+
+                <p id="pesanEvaluasi"
+                    class="text-xs font-medium text-gray-300 bg-zinc-900 border border-white/5 py-3 px-4 rounded-xl inline-block max-w-md">
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="ulangiKuis()"
+                        class="bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-semibold text-xs px-6 py-3 rounded-xl transition-all">
+                        Coba Lagi
+                    </button>
+                    <a href="index.html"
+                        class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xs px-6 py-3 rounded-xl transition-all inline-flex items-center justify-center">
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-[#09090b] border-t border-zinc-800 text-zinc-400 pt-16 pb-12 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-7 h-7 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                        <img src="assets/logo.png" alt="Logo" class="w-4 h-4 object-contain">
+                    </div>
+                    <span class="text-white font-bold text-base tracking-wide">Kebudayaan Bali</span>
+                </div>
+                <p class="text-zinc-500 text-sm max-w-sm leading-relaxed">
+                    Platform edukasi digital warisan nusantara, mendokumentasikan keindahan eksotis tradisi, arsitektur,
+                    bahasa, dan kuliner Pulau Dewata.
+                </p>
+            </div>
+
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest">Materi Edukasi</h4>
+                <ul class="space-y-2 text-sm text-zinc-500">
+                    <li><a href="sejarah-bahasa.html" class="hover:text-yellow-500 transition-colors">Sejarah &amp;
+                            Bahasa</a></li>
+                    <li><a href="arsitektur-pakaian.html" class="hover:text-yellow-500 transition-colors">Arsitektur
+                            &amp; Pakaian</a></li>
+                    <li><a href="kuliner-kesenian.html" class="hover:text-yellow-500 transition-colors">Kuliner &amp;
+                            Kesenian</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest">Zona Kreatif</h4>
+                <ul class="space-y-2 text-sm text-zinc-500">
+                    <li><a href="interaktif.html" class="hover:text-yellow-500 transition-colors">Uji Wawasan Kuis</a>
+                    </li>
+                    <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Kembali ke Beranda</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
+            <p>&copy; 2026 Kebudayaan Bali — Pesona Eksotis Nusantara. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const databaseKuis = [
+            {
+                id: 1,
+                soal: "Apa landasan utama filosofi keharmonisan tata ruang dalam arsitektur tradisional Bali?",
+                pilihan: [
+                    "Asta Kosala Kosali & Tri Hita Karana",
+                    "Bhineka Tunggal Ika & Ngurah Rai",
+                    "Puputan Badung & Candi Bentar",
+                    "Sor Singgih Basa & Bale Manten"
+                ],
+                jawabanBenar: 0
+            },
+            {
+                id: 2,
+                soal: "Tingkatan busana tradisional Bali yang paling megah dan mewah yang biasa dipakai saat upacara pernikahan dinamakan...",
+                pilihan: [
+                    "Payas Alit",
+                    "Payas Madya",
+                    "Payas Agung",
+                    "Kebaya Kamen"
+                ],
+                jawabanBenar: 2
+            },
+            {
+                id: 3,
+                soal: "Pintu gerbang tradisional yang berfungsi sebagai penanda pintu masuk utama pemukiman rumah tinggal masyarakat Bali adalah...",
+                pilihan: [
+                    "Candi Bentar",
+                    "Pura Padmasana",
+                    "Bale Manten",
+                    "Angkul-Angkul"
+                ],
+                jawabanBenar: 3
+            },
+            {
+                id: 4,
+                soal: "Tingkatan bahasa dalam Sor Singgih Basa Bali yang digunakan khusus saat berbicara dengan pemuka agama atau dalam ritual adat adalah...",
+                pilihan: [
+                    "Bahasa Bali Alus",
+                    "Bahasa Bali Madya",
+                    "Bahasa Bali Kasar",
+                    "Bahasa Bali Andap"
+                ],
+                jawabanBenar: 0
+            },
+            {
+                id: 5,
+                soal: "Peristiwa bersejarah heroik tahun 1906 di mana rakyat Bali bertempur habis-habisan melawan kolonial Belanda di Denpasar disebut...",
+                pilihan: [
+                    "Perang Jagaraga",
+                    "Puputan Badung",
+                    "Trunajaya",
+                    "Puputan Margarana"
+                ],
+                jawabanBenar: 1
+            }
+        ];
+
+        let indexPertanyaan = 0;
+        let skorTotal = 0;
+        let dataUser = { nama: '', asal: '' };
+
+        function mulaiKuis() {
+            const inputNama = document.getElementById('namaPeserta').value.trim();
+            const inputAsal = document.getElementById('asalPeserta').value.trim();
+
+            if (!inputNama || !inputAsal) {
+                alert('Silakan lengkapi data Nama dan Asal Daerah terlebih dahulu!');
+                return;
+            }
+
+            dataUser.nama = inputNama;
+            dataUser.asal = inputAsal;
+
+            document.getElementById('identitasBox').classList.add('hidden');
+            document.getElementById('kuisContainer').classList.remove('hidden');
+            document.getElementById('haloUser').innerText = `Peserta: ${dataUser.nama} (${dataUser.asal})`;
+
+            indexPertanyaan = 0;
+            skorTotal = 0;
+            muatSoal();
+        }
+
+        function muatSoal() {
+            if (indexPertanyaan >= databaseKuis.length) {
+                tampilkanHasil();
+                return;
+            }
+
+            document.getElementById('nomorPertanyaan').innerText = `Pertanyaan ${indexPertanyaan + 1} dari ${databaseKuis.length}`;
+            const persenProgress = ((indexPertanyaan) / databaseKuis.length) * 100;
+            document.getElementById('progressBar').style.width = `${persenProgress}%`;
+
+            const dataSoalSaatIni = databaseKuis[indexPertanyaan];
+            document.getElementById('teksSoal').innerText = dataSoalSaatIni.soal;
+
+            const wadahPilihan = document.getElementById('pilihanContainer');
+            wadahPilihan.innerHTML = '';
+
+            dataSoalSaatIni.pilihan.forEach((pilihan, idx) => {
+                const tombolOpsi = document.createElement('button');
+                tombolOpsi.className = "w-full bg-zinc-900/60 hover:bg-zinc-800 border border-white/5 hover:border-yellow-500/40 text-left px-5 py-4 rounded-xl text-sm font-medium text-gray-300 hover:text-white transition-all duration-200 active:scale-[0.99]";
+                tombolOpsi.innerText = pilihan;
+                tombolOpsi.onclick = () => prosesJawaban(idx);
+                wadahPilihan.appendChild(tombolOpsi);
+            });
+        }
+
+        function prosesJawaban(pilihanTerpilih) {
+            const dataSoalSaatIni = databaseKuis[indexPertanyaan];
+
+            if (pilihanTerpilih === dataSoalSaatIni.jawabanBenar) {
+                skorTotal += 20;
+            }
+
+            indexPertanyaan++;
+            muatSoal();
+        }
+
+        function tampilkanHasil() {
+            document.getElementById('progressBar').style.width = '100%';
+            document.getElementById('kuisContainer').classList.add('hidden');
+            document.getElementById('hasilContainer').classList.remove('hidden');
+
+            document.getElementById('hasilNama').innerText = dataUser.nama;
+            document.getElementById('skorAngka').innerText = skorTotal;
+
+            let pesan = "";
+            if (skorTotal === 100) {
+                pesan = "Sempurna! Anda memiliki wawasan budaya Bali yang luar biasa tangguh!";
+            } else if (skorTotal >= 60) {
+                pesan = "Bagus sekali! Pemahaman Anda mengenai budaya Denpasar sudah cukup solid.";
+            } else {
+                pesan = "Jangan berkecil hati. Jelajahi kembali menu Arsitektur & Kuliner untuk memperdalam wawasan Anda.";
+            }
+            document.getElementById('pesanEvaluasi').innerText = pesan;
+        }
+
+        function ulangiKuis() {
+            document.getElementById('hasilContainer').classList.add('hidden');
+            document.getElementById('identitasBox').classList.remove('hidden');
+            document.getElementById('namaPeserta').value = '';
+            document.getElementById('asalPeserta').value = '';
+        }
+    </script>
+</body>
+
+</html>
