@@ -18,26 +18,33 @@
             class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent z-10">
         </div>
 
-        <nav
-            class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 hidden md:flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
-            <div class="flex items-center gap-3 lg:gap-4 shrink-0">
-                <div
-                    class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
-                    <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+        <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 bg-black/40 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 text-white shadow-2xl transition-all duration-300">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto px-6 lg:px-8 py-4">
+                
+                <div class="flex items-center gap-3 lg:gap-4 shrink-0">
+                    <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                        <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+                    </div>
+                    <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
                 </div>
-                <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
-            </div>
 
-            <div class="flex items-center gap-4 lg:gap-8 text-xs lg:text-sm font-medium text-gray-300 shrink-0">
-                <a href="index.html" class="hover:text-white transition-colors whitespace-nowrap">Beranda</a>
-                <a href="sejarah-bahasa.html"
-                    class="hover:text-yellow-400 text-yellow-500 border-b-2 pb-1 font-semibold transition-all duration-300 ease-in-out whitespace-nowrap">Sejarah
-                    & Bahasa</a>
-                <a href="arsitektur-pakaian.html"
-                    class="hover:text-white transition-colors whitespace-nowrap">Arsitektur & Pakaian</a>
-                <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap">Kuliner &
-                    Kesenian</a>
-                <a href="interaktif.html" class="hover:text-white transition-colors whitespace-nowrap">Uji Wawasan</a>
+                <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20 transition-colors" aria-controls="navbar-hamburger" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+
+                <div class="hidden w-full md:block md:w-auto mt-4 md:mt-0 transition-all duration-300" id="navbar-hamburger">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4 lg:gap-8 text-sm md:text-xs lg:text-sm font-medium text-gray-300 pt-4 md:pt-0 border-t border-white/10 md:border-0">
+                        <a href="index.html" class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Beranda</a>
+                        <a href="sejarah-bahasa.html" class="hover:text-yellow-400 text-yellow-500 font-semibold transition-all duration-300 ease-in-out whitespace-nowrap md:border-b-2 md:pb-1 md:border-yellow-500">Sejarah & Bahasa</a>
+                        <a href="arsitektur-pakaian.html" class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Arsitektur & Pakaian</a>
+                        <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Kuliner & Kesenian</a>
+                        <a href="interaktif.html" class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Uji Wawasan</a>
+                    </div>
+                </div>
+
             </div>
         </nav>
 
@@ -455,33 +462,7 @@
     </footer>
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const body = document.getElementById("page-body");
-
-            requestAnimationFrame(() => {
-                body.classList.remove("opacity-0");
-                body.classList.add("opacity-100");
-            });
-
-            const links = document.querySelectorAll(".nav-transition");
-            links.forEach(link => {
-                link.addEventListener("click", (e) => {
-                    const targetUrl = link.getAttribute("href");
-                    if (targetUrl.startsWith("#") || targetUrl === "") return;
-
-                    e.preventDefault();
-                    body.classList.remove("opacity-100");
-                    body.classList.add("opacity-0");
-
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, 400);
-                });
-            });
-        });
-    </script>
-
+    
 </body>
 
 </html>
