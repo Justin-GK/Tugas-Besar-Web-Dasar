@@ -283,32 +283,6 @@
     </footer>
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const body = document.getElementById("page-body");
-
-            requestAnimationFrame(() => {
-                body.classList.remove("opacity-0");
-                body.classList.add("opacity-100");
-            });
-
-            const links = document.querySelectorAll(".nav-transition");
-            links.forEach(link => {
-                link.addEventListener("click", (e) => {
-                    const targetUrl = link.getAttribute("href");
-                    if (targetUrl.startsWith("#") || targetUrl === "") return;
-
-                    e.preventDefault();
-                    body.classList.remove("opacity-100");
-                    body.classList.add("opacity-0");
-
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, 400);
-                });
-            });
-        });
-    </script>
 
 </body>
 
