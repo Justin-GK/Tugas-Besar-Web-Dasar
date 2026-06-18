@@ -6,101 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesona Budaya Bali</title>
     <link rel="stylesheet" href="./src/output.css">
-    
+
 </head>
 
 <body>
     <div class="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-    style="background-image: url('assets/kesenian.jpg');">
+        style="background-image: url('assets/kesenian.jpg');">
 
-    <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
 
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 hidden md:flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
-        <div class="flex items-center gap-3 lg:gap-4 shrink-0">
-            <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
-                <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+        <nav
+            class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 hidden md:flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
+            <div class="flex items-center gap-3 lg:gap-4 shrink-0">
+                <div
+                    class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                    <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+                </div>
+                <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
             </div>
-            <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
+
+            <div class="flex items-center gap-4 lg:gap-8 text-xs lg:text-sm font-medium text-gray-300 shrink-0">
+                <a href="index.html"
+                    class="hover:text-yellow-400 text-yellow-500 border-b-2 pb-1 font-semibold transition-all duration-300 ease-in-out whitespace-nowrap">Beranda</a>
+                <a href="sejarah-bahasa.html" class="hover:text-white transition-colors whitespace-nowrap">Sejarah &amp;
+                    Bahasa</a>
+                <a href="arsitektur-pakaian.html"
+                    class="hover:text-white transition-colors whitespace-nowrap">Arsitektur &amp; Pakaian</a>
+                <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap ">Kuliner
+                    &amp; Kesenian</a>
+                <a href="interaktif.html" class="hover:text-white transition-colors whitespace-nowrap ">Uji Wawasan</a>
+            </div>
+        </nav>
+
+        <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-20 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                KULINER & KESENIAN <br> BALI
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
+                Bali adalah sebuah pulau di Indonesia yang terkenal dengan ornamen alamnya yang indah, budaya yang
+                sangat kental, serta keseniannya yang exotic. Pulau ini sering disebut sebagai Pulau Dewata karena
+                spiritualitasnya yang magis.
+            </p>
         </div>
 
-        <div class="flex items-center gap-4 lg:gap-8 text-xs lg:text-sm font-medium text-gray-300 shrink-0">
-            <a href="index.html" class="text-yellow-500 font-semibold transition-colors whitespace-nowrap">Beranda</a>
-            <a href="sejarah-bahasa.html" class="hover:text-white transition-colors whitespace-nowrap">Sejarah &amp; Bahasa</a>
-            <a href="arsitektur-pakaian.html" class="hover:text-white transition-colors whitespace-nowrap">Arsitektur &amp; Pakaian</a>
-            <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap ">Kuliner &amp; Kesenian</a>
-            <a href="interaktif.html" class="hover:text-white transition-colors whitespace-nowrap ">Uji Wawasan</a>
-        </div>
-    </nav>
+        <div class="absolute bottom-0 w-full z-20 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 pb-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white px-8 md:px-20 max-w-7xl mx-auto">
 
-    <div class="relative z-10 flex flex-col justify-center h-full px-8 md:px-20 max-w-4xl">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-            KULINER & KESENIAN <br> BALI
-        </h1>
-        <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-            Bali adalah sebuah pulau di Indonesia yang terkenal dengan ornamen alamnya yang indah, budaya yang
-            sangat kental, serta keseniannya yang exotic. Pulau ini sering disebut sebagai Pulau Dewata karena
-            spiritualitasnya yang magis.
-        </p>
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100+</h2>
+                    <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kuliner
+                        Tradisional</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">40+</h2>
+                    <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Tarian &
+                        Kesenian</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">9</h2>
+                    <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kabupaten &
+                        Kota Budaya
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100%</h2>
+                    <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Warisan Budaya
+                        UNESCO</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-
-    <div class="absolute bottom-0 w-full z-20 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 pb-10">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white px-8 md:px-20 max-w-7xl mx-auto">
-
-        <div class="flex flex-col items-center">
-          <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100+</h2>
-          <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kuliner Tradisional</p>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">40+</h2>
-          <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Tarian & Kesenian</p>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">9</h2>
-          <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Kabupaten & Kota Budaya
-          </p>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">100%</h2>
-          <p class="text-xs md:text-sm text-gray-400 tracking-[0.2em] font-semibold uppercase">Warisan Budaya UNESCO</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
 
 
     <main class="pt-32 pb-24 bg-black relative">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div
+            class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-600/5 blur-[120px] rounded-full pointer-events-none">
+        </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            
+
             <div class="border-b border-zinc-800 pb-8 mb-16 flex flex-col">
-                <span class="text-yellow-500 text-xs font-semibold uppercase tracking-widest mb-4">Pengenalan Pulau Dewata</span>
-                <h1 class="text-white text-4xl md:text-5xl font-bold m-0 leading-tight tracking-tight">Eksplorasi Bali<br>Secara Menyeluruh</h1>
+                <span class="text-yellow-500 text-xs font-semibold uppercase tracking-widest mb-4">Pengenalan Pulau
+                    Dewata</span>
+                <h1 class="text-white text-4xl md:text-5xl font-bold m-0 leading-tight tracking-tight">Eksplorasi
+                    Bali<br>Secara Menyeluruh</h1>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
+
                 <div class="lg:col-span-5 text-zinc-400 text-lg leading-relaxed space-y-6">
-                    <p>Secara geografis dan kultural, Bali merupakan pusat simfoni keindahan nusantara. Terletak di antara Pulau Jawa dan Lombok, pulau ini membagi keajaibannya melalui lanskap pegunungan vulkanik yang megah, terasering sawah yang hijau, hingga garis pantai yang memukau.</p>
-                    <p>Setiap jengkal tanah di Bali dibangun atas dasar keselarasan. Melalui halaman edukasi interaktif ini, kamu akan dibawa melintasi visualisasi autentik dan arsip kebudayaan yang mencakup seluruh elemen identitas Bali dari masa ke masa.</p>
+                    <p>Secara geografis dan kultural, Bali merupakan pusat simfoni keindahan nusantara. Terletak di
+                        antara Pulau Jawa dan Lombok, pulau ini membagi keajaibannya melalui lanskap pegunungan vulkanik
+                        yang megah, terasering sawah yang hijau, hingga garis pantai yang memukau.</p>
+                    <p>Setiap jengkal tanah di Bali dibangun atas dasar keselarasan. Melalui halaman edukasi interaktif
+                        ini, kamu akan dibawa melintasi visualisasi autentik dan arsip kebudayaan yang mencakup seluruh
+                        elemen identitas Bali dari masa ke masa.</p>
                     <div class="pt-4">
-                        <span class="inline-flex items-center gap-2 text-sm text-yellow-500 font-semibold border border-yellow-500/20 bg-yellow-500/5 px-4 py-2 rounded-full">
+                        <span
+                            class="inline-flex items-center gap-2 text-sm text-yellow-500 font-semibold border border-yellow-500/20 bg-yellow-500/5 px-4 py-2 rounded-full">
                             📍 Telusuri Klaster Modul Di Bawah Ini
                         </span>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 grid grid-cols-3 gap-4 h-[350px]">
-                    <div class="col-span-2 row-span-2 rounded-2xl bg-zinc-900 border border-zinc-800/80 overflow-hidden group">
-                        <img src="assets/bali-architecture.jpg" alt="Pura Agung Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="col-span-2 row-span-2 rounded-2xl bg-zinc-900 border border-zinc-800/80 overflow-hidden group">
+                        <img src="assets/bali-architecture.jpg" alt="Pura Agung Bali"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="col-span-1 rounded-2xl bg-zinc-900 border border-zinc-800/80 overflow-hidden group">
-                        <img src="assets/sejarah-bahasa.jpg" alt="Seni Tari Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/sejarah-bahasa.jpg" alt="Seni Tari Bali"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="col-span-1 rounded-2xl bg-zinc-900 border border-zinc-800/80 overflow-hidden group">
                         <img src="assets/kesenian1.jpg">
@@ -114,47 +136,58 @@
     <section class="bg-[#09090b] py-20 border-t border-zinc-800/60 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 w-full h-[400px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252438.5444983084!2d115.02573294372981!3d-8.465058778437976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd140d34e9d0e77%3A0x6265051a7f71d4d!2sBali!5e0!3m2!1sid!2sid!4v1716800000000!5m2!1sid!2sid" 
-                        class="w-full h-full grayscale invert opacity-70 contrast-125 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 group-hover:contrast-100 transition-all duration-700 border-0" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+
+                <div
+                    class="lg:col-span-7 w-full h-[400px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252438.5444983084!2d115.02573294372981!3d-8.465058778437976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd140d34e9d0e77%3A0x6265051a7f71d4d!2sBali!5e0!3m2!1sid!2sid!4v1716800000000!5m2!1sid!2sid"
+                        class="w-full h-full grayscale invert opacity-70 contrast-125 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 group-hover:contrast-100 transition-all duration-700 border-0"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
 
                 <div class="lg:col-span-5 space-y-6">
                     <div>
-                        <span class="text-xs font-bold text-yellow-500 tracking-widest uppercase block mb-2">Titik Koordinat Budaya</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Pemetaan Geo-Kultural</h2>
+                        <span class="text-xs font-bold text-yellow-500 tracking-widest uppercase block mb-2">Titik
+                            Koordinat Budaya</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Pemetaan Geo-Kultural
+                        </h2>
                         <p class="text-zinc-400 mt-3 text-base leading-relaxed">
-                            Mulai eksplorasi terarah kamu dengan langsung melompat ke materi-materi edukasi spesifik di bawah ini.
+                            Mulai eksplorasi terarah kamu dengan langsung melompat ke materi-materi edukasi spesifik di
+                            bawah ini.
                         </p>
                     </div>
 
                     <div class="space-y-3">
-                        <a href="sejarah-bahasa.html" class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
+                        <a href="sejarah-bahasa.html"
+                            class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
                             <div class="flex items-center gap-3">
                                 <span class="text-xl">📜</span>
-                                <span class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">01 · Sejarah & Bahasa Bali</span>
+                                <span
+                                    class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">01
+                                    · Sejarah & Bahasa Bali</span>
                             </div>
                             <span class="text-zinc-500 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
 
-                        <a href="arsitektur-pakaian.html" class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
+                        <a href="arsitektur-pakaian.html"
+                            class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
                             <div class="flex items-center gap-3">
                                 <span class="text-xl">🏛️</span>
-                                <span class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">02 · Arsitektur & Pakaian Adat Bali</span>
+                                <span
+                                    class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">02
+                                    · Arsitektur & Pakaian Adat Bali</span>
                             </div>
                             <span class="text-zinc-500 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
 
-                        <a href="kuliner-kesenian.html" class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
+                        <a href="kuliner-kesenian.html"
+                            class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-yellow-500/40 hover:bg-zinc-900/80 transition-all duration-200 group">
                             <div class="flex items-center gap-3">
                                 <span class="text-xl">🍲</span>
-                                <span class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">03 · Kuliner & Kesenian Bali</span>
+                                <span
+                                    class="text-sm font-semibold text-white group-hover:text-yellow-500 transition-colors">03
+                                    · Kuliner & Kesenian Bali</span>
                             </div>
                             <span class="text-zinc-500 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
@@ -166,60 +199,73 @@
     </section>
 
     <section class="bg-black py-24 border-t border-zinc-800 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-yellow-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-yellow-600/10 blur-[120px] rounded-full pointer-events-none">
+        </div>
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
             <span class="text-xs font-bold text-yellow-500 tracking-[0.3em] uppercase block mb-4">Uji Wawasanmu</span>
             <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight mb-6">
                 Sudah Tahu Banyak Tentang <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600">Kebudayaan Bali?</span>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600">Kebudayaan
+                    Bali?</span>
             </h2>
             <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                Pede dengan pemahamanmu? Jangan cuma dibaca, buktikan pengetahuanmu sekarang melalui tantangan kuis interaktif eksklusif kami!
+                Pede dengan pemahamanmu? Jangan cuma dibaca, buktikan pengetahuanmu sekarang melalui tantangan kuis
+                interaktif eksklusif kami!
             </p>
-            
-            <a href="interaktif.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-extrabold text-base tracking-wide shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 group">
+
+            <a href="interaktif.html"
+                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-extrabold text-base tracking-wide shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 group">
                 🚀 Gas Kuis Sekarang
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
             </a>
         </div>
     </section>
-    
+
     <footer class="bg-[#09090b] border-t border-zinc-800 text-zinc-400 pt-16 pb-12 px-6 relative z-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
-            
+
             <div class="md:col-span-5 space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-7 h-7 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                    <div
+                        class="w-7 h-7 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
                         <img src="assets/logo.png" alt="Logo" class="w-4 h-4 object-contain">
                     </div>
                     <span class="text-white font-bold text-base tracking-wide">Kebudayaan Bali</span>
                 </div>
                 <p class="text-zinc-500 text-sm max-w-sm leading-relaxed">
-                    Platform edukasi digital warisan nusantara, mendokumentasikan keindahan eksotis tradisi, arsitektur, bahasa, dan kuliner Pulau Dewata.
+                    Platform edukasi digital warisan nusantara, mendokumentasikan keindahan eksotis tradisi, arsitektur,
+                    bahasa, dan kuliner Pulau Dewata.
                 </p>
             </div>
 
             <div class="md:col-span-3 space-y-3">
                 <h4 class="text-white text-xs font-bold uppercase tracking-widest">Materi Edukasi</h4>
                 <ul class="space-y-2 text-sm text-zinc-500">
-                    <li><a href="sejarah-bahasa.html" class="hover:text-yellow-500 transition-colors">Sejarah &amp; Bahasa</a></li>
-                    <li><a href="arsitektur-pakaian.html" class="hover:text-yellow-500 transition-colors">Arsitektur &amp; Pakaian</a></li>
-                    <li><a href="kuliner-kesenian.html" class="hover:text-yellow-500 transition-colors">Kuliner &amp; Kesenian</a></li>
+                    <li><a href="sejarah-bahasa.html" class="hover:text-yellow-500 transition-colors">Sejarah &amp;
+                            Bahasa</a></li>
+                    <li><a href="arsitektur-pakaian.html" class="hover:text-yellow-500 transition-colors">Arsitektur
+                            &amp; Pakaian</a></li>
+                    <li><a href="kuliner-kesenian.html" class="hover:text-yellow-500 transition-colors">Kuliner &amp;
+                            Kesenian</a></li>
                 </ul>
             </div>
 
             <div class="md:col-span-4 space-y-3">
                 <h4 class="text-white text-xs font-bold uppercase tracking-widest">Zona Kreatif</h4>
                 <ul class="space-y-2 text-sm text-zinc-500">
-                    <li><a href="interaktif.html" class="hover:text-yellow-500 transition-colors">Uji Wawasan Kuis</a></li>
+                    <li><a href="interaktif.html" class="hover:text-yellow-500 transition-colors">Uji Wawasan Kuis</a>
+                    </li>
                     <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Kembali ke Beranda</a></li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="max-w-7xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
             <p>&copy; 2026 Kebudayaan Bali — Pesona Eksotis Nusantara. All rights reserved.</p>
             <div class="flex gap-6">
                 <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
@@ -232,7 +278,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const body = document.getElementById("page-body");
-            
+
             requestAnimationFrame(() => {
                 body.classList.remove("opacity-0");
                 body.classList.add("opacity-100");
@@ -250,11 +296,12 @@
 
                     setTimeout(() => {
                         window.location.href = targetUrl;
-                    }, 400); 
+                    }, 400);
                 });
             });
         });
     </script>
 
 </body>
+
 </html>
