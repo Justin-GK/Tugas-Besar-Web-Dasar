@@ -6,77 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuis Interaktif - Pesona Budaya Bali</title>
     <link rel="stylesheet" href="./src/output.css">
-    <style>
-        #menuToggle:checked~#mobileMenu {
-            display: flex !important;
-        }
-
-        #menuToggle:checked~label #line1 {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        #menuToggle:checked~label #line2 {
-            opacity: 0;
-        }
-
-        #menuToggle:checked~label #line3 {
-            transform: rotate(-45deg) translate(3px, -3px);
-        }
-    </style>
 </head>
 
 <body class="bg-black text-white font-sans selection:bg-yellow-500 selection:text-black min-h-screen">
 
     <nav
-        class="sticky top-6 mx-auto w-11/12 max-w-5xl z-50 flex items-center justify-between px-6 lg:px-8 py-4 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-white shadow-2xl">
+        class="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-5xl z-50 bg-black/40 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 text-white shadow-2xl transition-all duration-300">
+        <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto px-6 lg:px-8 py-4">
 
-        <div class="flex items-center gap-3 lg:gap-4 shrink-0">
-            <div class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
-                <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+            <div class="flex items-center gap-3 lg:gap-4 shrink-0">
+                <div
+                    class="w-8 h-8 rounded-full border border-yellow-500 flex items-center justify-center overflow-hidden">
+                    <img src="assets/logo.png" alt="Logo" class="w-5 h-5 object-contain">
+                </div>
+                <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
             </div>
-            <span class="font-bold text-lg lg:text-lg tracking-wide whitespace-nowrap">Kebudayaan Bali</span>
-        </div>
 
-        <div class="hidden lg:flex items-center gap-4 lg:gap-8 text-xs lg:text-sm font-medium text-gray-300 shrink-0">
-            <a href="index.html" class="hover:text-white transition-colors">Beranda</a>
-            <a href="sejarah-bahasa.html" class="hover:text-white transition-colors whitespace-nowrap">Sejarah &
-                Bahasa</a>
-            <a href="arsitektur-pakaian.html" class="hover:text-white transition-colors whitespace-nowrap">Arsitektur &
-                Pakaian</a>
-            <a href="kuliner-kesenian.html" class="hover:text-white transition-colors whitespace-nowrap">Kuliner &
-                Kesenian</a>
-            <a href="interaktif.html"
-                class="hover:text-yellow-400 text-yellow-500 border-b-2 pb-1 font-semibold transition-all duration-300 ease-in-out">Uji
-                Wawasan</a>
-        </div>
+            <button id="hamburgerBtn" data-collapse-toggle="navbar-hamburger" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20 transition-colors"
+                aria-controls="navbar-hamburger" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
 
-        <input type="checkbox" id="menuToggle" class="hidden">
-        <label id="hamburgerBtn" for="menuToggle"
-            class="lg:hidden flex flex-col justify-between w-6 h-4 pt-0.5 focus:outline-none z-50 cursor-pointer">
-            <span id="line1" class="w-full h-0.5 bg-white rounded transition-all duration-300 origin-center"></span>
-            <span id="line2" class="w-full h-0.5 bg-white rounded transition-all duration-300"></span>
-            <span id="line3" class="w-full h-0.5 bg-white rounded transition-all duration-300 origin-center"></span>
-        </label>
+            <div class="hidden w-full md:block md:w-auto mt-4 md:mt-0 transition-all duration-300"
+                id="navbar-hamburger">
+                <div
+                    class="flex flex-col md:flex-row md:items-center gap-4 lg:gap-8 text-sm md:text-xs lg:text-sm font-medium text-gray-300 pt-4 md:pt-0 border-t border-white/10 md:border-0">
+                    <a href="index.html"
+                        class="hover:text-yellow-400 text-gray-300 transition-all duration-300 ease-in-out whitespace-nowrap py-1 md:py-0">Beranda</a>
+                    <a href="sejarah-bahasa.html"
+                        class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Sejarah &amp;
+                        Bahasa</a>
+                    <a href="arsitektur-pakaian.html"
+                        class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Arsitektur &amp;
+                        Pakaian</a>
+                    <a href="kuliner-kesenian.html"
+                        class="hover:text-white transition-colors whitespace-nowrap py-1 md:py-0">Kuliner &amp;
+                        Kesenian</a>
+                    <a href="interaktif.html"
+                        class="hover:text-yellow-400 text-yellow-500 font-semibold transition-all duration-300 ease-in-out whitespace-nowrap md:border-b-2 md:pb-1 md:border-yellow-500 py-1 md:py-0">Uji
+                        Wawasan</a>
+                </div>
+            </div>
 
-        <div id="mobileMenu"
-            class="hidden fixed inset-0 bg-black/95 blur-3xl flex-col w-screen h-screen items-center justify-center gap-8 text-xl font-semibold transition-all duration-300 z-40 rounded-xl">
-            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Beranda</a>
-            <a href="sejarah-bahasa.html" class="text-gray-400 hover:text-white transition-colors">Sejarah & Bahasa</a>
-            <a href="arsitektur-pakaian.html" class="text-gray-400 hover:text-white transition-colors">Arsitektur &
-                Pakaian</a>
-            <a href="kuliner-kesenian.html" class="text-gray-400 hover:text-white transition-colors">Kuliner &
-                Kesenian</a>
-            <a href="interaktif.html" class="text-yellow-500 font-bold border-b-2 border-yellow-500 pb-1">Interaktif</a>
         </div>
     </nav>
 
     <div class="relative w-full h-[60vh] -mt-24 bg-cover bg-center bg-no-repeat overflow-hidden"
         style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80');">
         <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-zinc-950 to-transparent z-20"></div>
+        <div class="absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-zinc-950 to-transparent z-20"></div>
         <div class="relative z-30 flex flex-col justify-center h-full px-8 md:px-20 max-w-4xl pt-24">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-2">
-                EVALUASI & <br> KUIS INTERAKTIF
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">
+                EVALUASI &amp; <br> KUIS INTERAKTIF
             </h1>
             <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
                 Uji wawasan dan pemahaman Anda mengenai sejarah, lestarinya bahasa, keunikan arsitektur, strata busana,
@@ -121,7 +108,6 @@
 
             <div id="kuisContainer"
                 class="hidden bg-zinc-900/40 border border-white/5 rounded-2xl p-6 md:p-8 space-y-8 shadow-xl">
-
                 <div class="w-full bg-zinc-950 h-2 rounded-full overflow-hidden border border-white/5">
                     <div id="progressBar" class="bg-yellow-500 h-full w-0 transition-all duration-300"></div>
                 </div>
@@ -147,8 +133,7 @@
                 class="hidden bg-zinc-900/40 border border-yellow-500/20 rounded-2xl p-8 text-center space-y-6 shadow-2xl">
                 <div
                     class="inline-flex items-center justify-center w-20 h-20 bg-yellow-500/10 rounded-full text-4xl mb-2">
-                    🏆
-                </div>
+                    🏆</div>
                 <div class="space-y-2">
                     <h3 class="text-2xl font-bold text-white">Luar Biasa, <span id="hasilNama"
                             class="text-yellow-500"></span>!</h3>
@@ -233,6 +218,16 @@
     </footer>
 
     <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navbarMenu = document.getElementById('navbar-hamburger');
+
+        hamburgerBtn.addEventListener('click', () => {
+            const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+            hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+            navbarMenu.classList.toggle('hidden');
+        });
+
+        // Database & Mekanisme Sistem Kuis
         const databaseKuis = [
             {
                 id: 1,
