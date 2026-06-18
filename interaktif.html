@@ -57,7 +57,7 @@
         </div>
     </nav>
 
-    <div class="relative w-full h-[60vh] -mt-24 bg-cover bg-center bg-no-repeat overflow-hidden"
+    <!-- <div class="relative w-full h-[60vh] -mt-24 bg-cover bg-center bg-no-repeat overflow-hidden"
         style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80');">
         <div class="absolute inset-0 bg-black/60 z-10"></div>
         <div class="absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-zinc-950 to-transparent z-20"></div>
@@ -70,14 +70,15 @@
                 serta kuliner khas kota Denpasar, Bali.
             </p>
         </div>
-    </div>
+    </div> -->
 
-    <main class="bg-zinc-950 text-white px-8 md:px-20 py-16 space-y-24 relative z-30">
+    <main
+        class="bg-zinc-950 text-white px-8 md:px-20 py-24 relative z-30 min-h-screen flex items-center justify-center">
 
-        <section id="interaktif" class="max-w-3xl mx-auto space-y-10">
-            <div class="border-b border-white/10 pb-6 text-center md:text-left">
-                <h2 class="text-2xl font-bold tracking-tight">Uji Wawasan Budaya Bali</h2>
-                <p class="text-xs text-gray-400 mt-1">Jawablah pertanyaan di bawah ini dengan memilih satu jawaban yang
+        <section id="interaktif" class="max-w-3xl mx-auto min-h-[80vh] flex flex-col justify-center">
+            <div id="quizHeader" class="border-b border-white/10 pb-6 text-center md:text-left">
+                <h2 class="text-5xl font-bold tracking-tight">Uji Wawasan Budaya Bali</h2>
+                <p class="text-lg text-gray-400 mt-5">Jawablah pertanyaan di bawah ini dengan memilih satu jawaban yang
                     paling tepat.</p>
             </div>
 
@@ -281,6 +282,7 @@
         let dataUser = { nama: '', asal: '' };
 
         function mulaiKuis() {
+            document.getElementById('quizHeader').classList.add('hidden');
             const inputNama = document.getElementById('namaPeserta').value.trim();
             const inputAsal = document.getElementById('asalPeserta').value.trim();
 
@@ -357,6 +359,7 @@
         }
 
         function ulangiKuis() {
+            document.getElementById('quizHeader').classList.remove('hidden');
             document.getElementById('hasilContainer').classList.add('hidden');
             document.getElementById('identitasBox').classList.remove('hidden');
             document.getElementById('namaPeserta').value = '';
