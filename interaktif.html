@@ -218,16 +218,6 @@
     </footer>
 
     <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const navbarMenu = document.getElementById('navbar-hamburger');
-
-        hamburgerBtn.addEventListener('click', () => {
-            const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-            hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
-            navbarMenu.classList.toggle('hidden');
-        });
-
-        // Database & Mekanisme Sistem Kuis
         const databaseKuis = [
             {
                 id: 1,
@@ -373,6 +363,7 @@
             document.getElementById('asalPeserta').value = '';
         }
     </script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
